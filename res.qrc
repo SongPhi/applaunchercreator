@@ -14,5 +14,6 @@
         <file>img/fr.png</file>
         <file>img/gb.png</file>
         <file>img/vn.png</file>
+        <file>img/donate_button.png</file>
     </qresource>
 </RCC>
