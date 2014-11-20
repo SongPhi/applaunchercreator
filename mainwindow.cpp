@@ -3,6 +3,7 @@
 #include <QFileDialog>
 #include <QDir>
 #include <QPixmap>
+#include <QAction>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -58,7 +59,15 @@ void MainWindow::on_actionAbout_Qt_triggered()
     QApplication::aboutQt();
 }
 
-void MainWindow::on_toolButton_6_clicked()
+void MainWindow::on_actionEnglish_triggered()
+{
+    foreach (QAction* each, ui->languageToolbar->actions()) {
+        each->setChecked(false);
+    }
+    ui->actionEnglish->setChecked(true);
+}
+
+void MainWindow::on_btnIconOpen_clicked()
 {
     QFileDialog *fileDlg = new QFileDialog(this, tr(""),0,"Icons (*.ico)");
     fileDlg->setAcceptMode(QFileDialog::AcceptOpen);
@@ -68,4 +77,28 @@ void MainWindow::on_toolButton_6_clicked()
         ui->lblPreviewIcon->setPixmap( icon );
         ui->tbxIconFile->setText( fileName );
     }
+}
+
+void MainWindow::on_actionFrench_triggered()
+{
+    foreach (QAction* each, ui->languageToolbar->actions()) {
+        each->setChecked(false);
+    }
+    ui->actionFrench->setChecked(true);
+}
+
+void MainWindow::on_actionDeutsch_triggered()
+{
+    foreach (QAction* each, ui->languageToolbar->actions()) {
+        each->setChecked(false);
+    }
+    ui->actionDeutsch->setChecked(true);
+}
+
+void MainWindow::on_actionVietnamese_triggered()
+{
+    foreach (QAction* each, ui->languageToolbar->actions()) {
+        each->setChecked(false);
+    }
+    ui->actionVietnamese->setChecked(true);
 }

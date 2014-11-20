@@ -30,7 +30,15 @@ private slots:
 
     void on_actionAbout_Qt_triggered();
 
-    void on_toolButton_6_clicked();
+    void on_actionEnglish_triggered();
+
+    void on_btnIconOpen_clicked();
+
+    void on_actionFrench_triggered();
+
+    void on_actionDeutsch_triggered();
+
+    void on_actionVietnamese_triggered();
 
 private:
     Ui::MainWindow *ui;
